@@ -1,5 +1,5 @@
 """
-    Test for core custom commands.
+Test for core custom commands.
 """
 from unittest.mock import patch
 

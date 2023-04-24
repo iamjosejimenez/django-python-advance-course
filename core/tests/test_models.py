@@ -1,5 +1,5 @@
 """
-    Test for models.
+Test for models.
 """
 
 from django.contrib.auth import get_user_model
