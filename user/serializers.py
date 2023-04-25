@@ -20,6 +20,20 @@ class UserSerializer(serializers.ModelSerializer):
         return get_user_model().objects.create_user(**validated_data)
 
 
+class AuthUserSerializer(serializers.ModelSerializer):
+    """Serializer for the auth user object"""
+
+    class Meta:
+        model = get_user_model()
+        fields = ["email", "name"]
+
+    def update(self, instance, validated_data):
+        """Update and return auth user."""
+
+        user = super().update(instance, validated_data)
+        return user
+
+
 class AuthTokenSerializer(serializers.Serializer):
     """Serializer for the user auth token."""
 
